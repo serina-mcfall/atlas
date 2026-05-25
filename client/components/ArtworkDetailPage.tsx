@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useParams } from 'react-router'
 
 import { Artwork } from '../../models/Artwork.ts'
@@ -38,10 +39,18 @@ function ArtworkDetailPage() {
 }
 
 function ArtworkDetail({ artist, license, title, imageUrl, comments }: Props) {
+  useEffect(() => {
+    const previousTitle = document.title
+    document.title = `${title} — Art Gallery`
+    return () => {
+      document.title = previousTitle
+    }
+  }, [title])
+
   return (
     <>
       <h2>{title}</h2>
-      <img src={imageUrl} alt={title} />
+      <img src={imageUrl} alt={`${title}, artwork by ${artist.name}`} />
       <dl>
         <dt>Artist</dt>
         <dd>
@@ -52,10 +61,16 @@ function ArtworkDetail({ artist, license, title, imageUrl, comments }: Props) {
           <a href={license.url}>{license.name}</a>
         </dd>
       </dl>
-      {comments.length > 0 && <h4>comments</h4>}
-      {comments.map((comment) => (
-        <p>{comment}</p>
-      ))}
+      {comments.length > 0 && (
+        <>
+          <h3>Comments</h3>
+          <ul className="comments-list">
+            {comments.map((comment, index) => (
+              <li key={index}>{comment}</li>
+            ))}
+          </ul>
+        </>
+      )}
     </>
   )
 }

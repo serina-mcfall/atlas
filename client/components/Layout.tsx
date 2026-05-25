@@ -9,7 +9,9 @@ export default function Layout() {
       <div id="page-container">
         <div id="content-wrap">
           <Header />
-          <Outlet />
+          <main id="main-content">
+            <Outlet />
+          </main>
         </div>
         <Footer />
       </div>

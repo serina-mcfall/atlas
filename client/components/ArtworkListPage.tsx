@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import request from 'superagent'
 import { Link } from 'react-router'
@@ -9,6 +10,10 @@ import ErrorMessage from './ErrorMessage.tsx'
 const rootURL = new URL(`/api/v1`, document.baseURI)
 
 function ArtworkListPage() {
+  useEffect(() => {
+    document.title = 'Art Gallery'
+  }, [])
+
   const artworks = useQuery({
     queryKey: ['artwork'],
     queryFn: async () => {
