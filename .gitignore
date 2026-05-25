@@ -2,3 +2,6 @@ node_modules
 
 # Promptkit repository
 promptkit
+
+# Claude Code local state
+.claude
