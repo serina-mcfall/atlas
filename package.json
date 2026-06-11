@@ -15,6 +15,10 @@
     "build:client": "vite build",
     "build:server": "esbuild --packages=external --platform=node --format=esm --outfile=dist/server.js --bundle server/index.ts",
     "test": "vitest",
+    "knex": "knex --knexfile=knexfile.ts",
+    "migrate": "knex --knexfile=knexfile.ts migrate:latest",
+    "rollback": "knex --knexfile=knexfile.ts migrate:rollback",
+    "seed": "knex --knexfile=knexfile.ts seed:run",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "format": "prettier -w '**/*.{js,jsx,ts,tsx}'"
   },
@@ -24,7 +28,9 @@
     ]
   },
   "dependencies": {
-    "express": "^4.22.1"
+    "better-sqlite3": "^12.10.0",
+    "express": "^4.22.1",
+    "knex": "^3.2.10"
   },
   "devDependencies": {
     "@devacademy/eslint-config": "^1.10.2",
