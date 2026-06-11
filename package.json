@@ -1,9 +1,9 @@
 {
-  "name": "art-gallery",
+  "name": "atlas",
   "type": "module",
   "version": "0.1.0",
-  "description": "Consuming our own APIs",
-  "author": "Dev Academy Aotearoa",
+  "description": "An accessibility-first visual concept library",
+  "author": "Serina Mcfall",
   "license": "ISC",
   "main": "index.js",
   "scripts": {
