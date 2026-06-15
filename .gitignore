@@ -5,3 +5,6 @@ promptkit
 
 # Claude Code local state
 .claude
+
+# Local SQLite database (rebuilt from migrations + seeds)
+server/db/atlas.sqlite3

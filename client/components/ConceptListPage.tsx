@@ -1,13 +1,10 @@
 import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import request from 'superagent'
 import { Link } from 'react-router'
 
-import { Concept } from '../../models/Concept.ts'
+import { fetchConcepts } from '../apis/concepts.ts'
 import LoadingIndicator from './LoadingIndicator.tsx'
 import ErrorMessage from './ErrorMessage.tsx'
-
-const rootURL = new URL(`/api/v1`, document.baseURI)
 
 function ConceptListPage() {
   useEffect(() => {
@@ -16,10 +13,7 @@ function ConceptListPage() {
 
   const concepts = useQuery({
     queryKey: ['concepts'],
-    queryFn: async () => {
-      const res = await request.get(`${rootURL}/concepts`)
-      return res.body as Concept[]
-    },
+    queryFn: () => fetchConcepts(),
   })
 
   if (concepts.isPending) {
@@ -33,9 +27,9 @@ function ConceptListPage() {
   return (
     <ul>
       {concepts.data.map((concept) => (
-        <li key={concept.id}>
-          <Link to={`/${concept.id}`}>
-            {concept.title} by {concept.source.name}
+        <li key={concept.slug}>
+          <Link to={`/${concept.slug}`}>
+            {concept.title} ({concept.topic})
           </Link>
         </li>
       ))}
