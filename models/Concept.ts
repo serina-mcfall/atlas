@@ -1,14 +1,10 @@
 export interface Concept {
-  id: number
+  slug: string
   title: string
-  comments: string[]
+  topic: string
+  summary: string
   diagramUrl: string
-  source: {
-    name: string
-    url: string
-  }
-  license: {
-    url: string
-    name: string
-  }
+  explanation: string
+  source: { name: string; url: string } | null
+  relatedConcepts: { slug: string; title: string }[]
 }
