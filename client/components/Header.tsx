@@ -1,5 +1,5 @@
 function Header() {
-  return <h1>Art Gallery</h1>
+  return <h1>Atlas</h1>
 }
 
 export default Header

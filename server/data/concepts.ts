@@ -3,8 +3,8 @@ export default [
     id: 1,
     title: 'Kea in Flight',
     comments: ['Very arty.'],
-    imageUrl: '/images/kea.jpg',
-    artist: {
+    diagramUrl: '/images/kea.jpg',
+    source: {
       name: 'Ben',
       url: 'https://www.flickr.com/photos/seabirdnz/',
     },
@@ -17,8 +17,8 @@ export default [
     id: 2,
     title: 'Kowhai Flowers',
     comments: ['Yellow.', 'So yellow.'],
-    imageUrl: '/images/kowhai.jpg',
-    artist: {
+    diagramUrl: '/images/kowhai.jpg',
+    source: {
       name: 'Sid Mosdell',
       url: 'https://www.flickr.com/photos/sidm/',
     },
@@ -31,8 +31,8 @@ export default [
     id: 3,
     title: 'Kotare',
     comments: [],
-    imageUrl: '/images/kotare.jpg',
-    artist: {
+    diagramUrl: '/images/kotare.jpg',
+    source: {
       name: 'Sid Mosdell',
       url: 'https://www.flickr.com/photos/sidm/',
     },
@@ -45,8 +45,8 @@ export default [
     id: 4,
     title: 'Harakeke Flowers',
     comments: ['Rare to see one without a tui feeding on it!'],
-    imageUrl: '/images/harakeke.jpg',
-    artist: {
+    diagramUrl: '/images/harakeke.jpg',
+    source: {
       name: 'Sid Mosdell',
       url: 'https://www.flickr.com/photos/sidm/',
     },
