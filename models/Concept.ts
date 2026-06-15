@@ -1,9 +1,9 @@
-export interface Artwork {
+export interface Concept {
   id: number
   title: string
   comments: string[]
-  imageUrl: string
-  artist: {
+  diagramUrl: string
+  source: {
     name: string
     url: string
   }

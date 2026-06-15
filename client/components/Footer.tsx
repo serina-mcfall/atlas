@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      <p>made by Dev Academy - Solutions </p>
+      <p>Atlas by Serina — converted from a Dev Academy art-gallery project</p>
     </footer>
   )
 }

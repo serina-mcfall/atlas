@@ -1,24 +1,20 @@
 import express from 'express'
-import data from './data/art.ts'
+import data from './data/concept.ts'
 
 const server = express()
 
-//http://localhost:3000/api/v1/artwork
-server.get('/api/v1/artwork', (req, res) => {
-  console.log('GET /api/v1/artwork hit')
+server.get('/api/v1/concepts', (req, res) => {
   res.json(data)
 })
 
-server.get('/api/v1/artwork/:id', (req, res) => {
+server.get('/api/v1/concepts/:id', (req, res) => {
   const id = Number(req.params.id)
-  const artwork = data.find((a) => a.id === id)
-  if (!artwork) {
+  const concept = data.find((c) => c.id === id)
+  if (!concept) {
     res.sendStatus(404)
   } else {
-    res.json(artwork)
+    res.json(concept)
   }
 })
 
 export default server
-
-// Routes
