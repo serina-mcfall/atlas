@@ -45,7 +45,7 @@ function ConceptDetail({
   }, [title])
 
   return (
-    <>
+    <div data-topic={topic}>
       <h2>{title}</h2>
       <p className="concept-topic">{topic}</p>
       <p className="concept-summary">{summary}</p>
@@ -71,7 +71,7 @@ function ConceptDetail({
           </ul>
         </nav>
       )}
-    </>
+    </div>
   )
 }
 
