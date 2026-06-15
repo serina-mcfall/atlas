@@ -1,5 +1,5 @@
 import express from 'express'
-import data from './data/concept.ts'
+import data from './data/concepts.ts'
 
 const server = express()
 
