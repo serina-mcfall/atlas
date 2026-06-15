@@ -1,0 +1,11 @@
+.chip {
+  display: inline-block;
+  font-size: var(--size-12);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--topic);
+  border-left: 3px solid var(--topic);
+  padding-left: var(--space-2);
+  line-height: 1;
+}
