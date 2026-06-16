@@ -1,0 +1,112 @@
+.sheet {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-areas:
+    'topic   title'
+    'diagram summary'
+    'diagram explanation'
+    'diagram source'
+    'diagram related';
+  gap: var(--space-2) var(--space-8);
+  align-items: start;
+  padding: var(--space-6) 0;
+}
+
+.title {
+  grid-area: title;
+  font-size: var(--size-36);
+  margin: 0;
+}
+
+.topicChipSlot {
+  grid-area: topic;
+}
+
+.summary {
+  grid-area: summary;
+  font-size: var(--size-18);
+  font-weight: 300;
+  color: var(--text);
+  opacity: 0.85;
+  max-width: var(--max-text);
+  margin: 0 0 var(--space-4);
+}
+
+.diagram {
+  grid-area: diagram;
+  position: sticky;
+  top: var(--space-6);
+  background: var(--topic-tint);
+  border: 1px solid var(--topic-border);
+  border-radius: 8px;
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+}
+
+.diagram img {
+  max-width: 100%;
+  height: auto;
+}
+
+.explanation {
+  grid-area: explanation;
+  max-width: var(--max-text);
+}
+
+.explanation p {
+  font-size: var(--size-16);
+  line-height: var(--leading-body);
+  margin-bottom: var(--space-4);
+}
+
+.source {
+  grid-area: source;
+  font-size: var(--size-14);
+  color: var(--text-muted);
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.related {
+  grid-area: related;
+  font-size: var(--size-14);
+  color: var(--text-muted);
+  margin-top: var(--space-2);
+}
+
+.relatedLabel {
+  margin-right: var(--space-2);
+  opacity: 0.6;
+}
+
+.relatedDivider {
+  opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+  .sheet {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'title'
+      'topic'
+      'summary'
+      'diagram'
+      'explanation'
+      'source'
+      'related';
+    gap: var(--space-4);
+  }
+
+  .diagram {
+    position: static;
+    min-height: 200px;
+  }
+
+  .title {
+    font-size: var(--size-28);
+  }
+}

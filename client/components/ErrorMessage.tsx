@@ -3,17 +3,10 @@ interface Props {
 }
 
 export default function ErrorMessage({ error }: Props) {
-  if (error != undefined) {
-    return (
-      <p className="error-message" role="alert">
-        Oops! Something went wrong: {String(error)}
-      </p>
-    )
-  }
-
+  const detail = error != undefined ? `: ${String(error)}` : ''
   return (
-    <p className="error-message" role="alert">
-      Oops! Something went wrong
+    <p role="alert" style={{ color: 'var(--text-muted)' }}>
+      Oops! Something went wrong{detail}
     </p>
   )
 }

@@ -28,6 +28,8 @@
     ]
   },
   "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "@fontsource-variable/lexend": "^5.2.11",
     "better-sqlite3": "^12.10.0",
     "express": "^4.22.1",
     "knex": "^3.2.10"

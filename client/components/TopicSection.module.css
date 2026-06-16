@@ -1,0 +1,27 @@
+.section {
+  margin-bottom: var(--space-12);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.heading {
+  margin: 0;
+  font-size: inherit;
+}
+
+.count {
+  font-size: var(--size-12);
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-3);
+}
