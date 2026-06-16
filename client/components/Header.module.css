@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: var(--space-6);
+}
+
+.wordmark {
+  font-size: var(--size-28);
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.wordmark:hover {
+  color: var(--topic);
+}
+
+.wordmark:focus-visible {
+  outline: 2px solid var(--topic);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.back {
+  font-size: var(--size-14);
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--topic);
+  text-decoration: underline;
+}
+
+.back:focus-visible {
+  outline: 2px solid var(--topic);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
