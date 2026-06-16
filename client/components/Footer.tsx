@@ -1,9 +1,9 @@
-function Footer() {
+import styles from './Footer.module.css'
+
+export default function Footer() {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <p>Atlas by Serina — converted from a Dev Academy art-gallery project</p>
     </footer>
   )
 }
-
-export default Footer
