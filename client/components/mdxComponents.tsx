@@ -1,10 +1,10 @@
-import type { ComponentProps } from 'react'
+import type { MDXComponents } from 'mdx/types'
 
-export const mdxComponents = {
-  h1: (props: ComponentProps<'h1'>) => <h2 {...props} />,
-  h2: (props: ComponentProps<'h2'>) => <h3 {...props} />,
-  p: (props: ComponentProps<'p'>) => <p {...props} />,
-  a: (props: ComponentProps<'a'>) => <a {...props} />,
-  code: (props: ComponentProps<'code'>) => <code {...props} />,
-  pre: (props: ComponentProps<'pre'>) => <pre {...props} />,
+export const mdxComponents: MDXComponents = {
+  h1: (props) => <h2 {...props} />,
+  h2: (props) => <h3 {...props} />,
+  p: (props) => <p {...props} />,
+  a: (props) => <a {...props} />,
+  code: (props) => <code {...props} />,
+  pre: (props) => <pre {...props} />,
 }

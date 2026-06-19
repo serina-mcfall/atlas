@@ -1,8 +1,9 @@
 import type { ComponentType } from 'react'
+import type { MDXComponents } from 'mdx/types'
 
 interface MDXModule {
   default: ComponentType<{
-    components?: Record<string, ComponentType<unknown>>
+    components?: MDXComponents
   }>
 }
 
