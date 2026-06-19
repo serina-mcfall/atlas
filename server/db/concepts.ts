@@ -10,7 +10,7 @@ export async function getAllConcepts(db = connection): Promise<Concept[]> {
       'topics.name as topic',
       'concepts.summary as summary',
       'concepts.diagram_url as diagramUrl',
-      'concepts.explanation as explanation',
+      'concepts.kind as kind',
       'concepts.source_name as sourceName',
       'concepts.source_url as sourceUrl',
     )
@@ -31,7 +31,7 @@ export async function getConceptBySlug(
       'topics.name as topic',
       'concepts.summary as summary',
       'concepts.diagram_url as diagramUrl',
-      'concepts.explanation as explanation',
+      'concepts.kind as kind',
       'concepts.source_name as sourceName',
       'concepts.source_url as sourceUrl',
     )
@@ -53,7 +53,7 @@ interface Row {
   topic: string
   summary: string
   diagramUrl: string
-  explanation: string
+  kind: 'concept' | 'reference'
   sourceName: string | null
   sourceUrl: string | null
 }
@@ -65,7 +65,7 @@ function toConcept(row: Row): Concept {
     topic: row.topic,
     summary: row.summary,
     diagramUrl: row.diagramUrl,
-    explanation: row.explanation,
+    kind: row.kind,
     source:
       row.sourceName && row.sourceUrl
         ? { name: row.sourceName, url: row.sourceUrl }
