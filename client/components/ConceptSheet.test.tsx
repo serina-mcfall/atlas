@@ -9,9 +9,9 @@ const concept = {
   slug: 'usestate-vs-usereducer',
   title: 'useState vs useReducer',
   topic: 'react',
+  kind: 'concept' as const,
   summary: 'When state transitions are coupled, useReducer.',
   diagramUrl: 'https://example.com/diagram.svg',
-  explanation: 'Long explanation body here.',
   source: { name: 'Dan Abramov', url: 'https://overreacted.io' },
   relatedConcepts: [{ slug: 'react-context', title: 'React context' }],
 }

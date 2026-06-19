@@ -2,6 +2,8 @@ import { Link } from 'react-router'
 import { Concept } from '../../models/Concept.ts'
 import TopicChip from './TopicChip.tsx'
 import styles from './ConceptSheet.module.css'
+import { getConceptBody } from '../lib/conceptBodies.ts'
+import { mdxComponents } from './mdxComponents.tsx'
 
 interface Props {
   concept: Concept
@@ -19,9 +21,14 @@ export default function ConceptSheet({ concept }: Props) {
         <img src={concept.diagramUrl} alt={`Diagram for ${concept.title}`} />
       </div>
       <div className={styles.explanation}>
-        {concept.explanation.split('\n\n').map((para, i) => (
-          <p key={i}>{para}</p>
-        ))}
+        {(() => {
+          const Body = getConceptBody(concept.slug)
+          return Body ? (
+            <Body components={mdxComponents} />
+          ) : (
+            <p>Body coming in a focused session.</p>
+          )
+        })()}
       </div>
       {concept.source && (
         <p className={styles.source}>

@@ -30,6 +30,8 @@
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@fontsource-variable/lexend": "^5.2.11",
+    "@mdx-js/react": "^3.1.1",
+    "@mdx-js/rollup": "^3.1.1",
     "better-sqlite3": "^12.10.0",
     "express": "^4.22.1",
     "knex": "^3.2.10"
