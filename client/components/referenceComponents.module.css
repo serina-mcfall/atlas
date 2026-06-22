@@ -1,0 +1,62 @@
+.section {
+  background: var(--topic-tint);
+  border: 1px solid var(--topic-border);
+  border-radius: 8px;
+  padding: var(--space-4);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--topic-border);
+}
+
+.sectionTitle {
+  font-size: var(--size-18);
+  font-weight: 600;
+  margin: 0;
+  color: var(--bg-deep);
+}
+
+.sectionNum {
+  font-family: var(--font-mono);
+  font-size: var(--size-12);
+  color: var(--topic);
+  opacity: 0.6;
+  letter-spacing: 0.1em;
+}
+
+.cmdList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.cmdRow {
+  display: grid;
+  grid-template-columns: minmax(0, auto) 1fr;
+  gap: var(--space-3);
+  align-items: baseline;
+  font-size: var(--size-14);
+}
+
+.cmdCode {
+  font-family: var(--font-mono);
+  font-size: var(--size-14);
+  background: var(--topic-tint);
+  border: 1px solid var(--topic-border);
+  padding: 0.15em 0.5em;
+  border-radius: 3px;
+  color: var(--bg-deep);
+  white-space: nowrap;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.cmdDesc {
+  color: var(--bg-deep);
+  opacity: 0.85;
+}
