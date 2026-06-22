@@ -73,6 +73,12 @@
   --topic-border: rgba(245, 168, 192, 0.25);
 }
 
+[data-topic='terminal'] {
+  --topic: #e8d098;
+  --topic-tint: rgba(232, 208, 152, 0.06);
+  --topic-border: rgba(232, 208, 152, 0.25);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
