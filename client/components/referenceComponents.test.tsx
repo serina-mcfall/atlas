@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import { Section, Cmd } from './referenceComponents.tsx'
+import { Section, Cmd } from './referenceComponents'
 
 describe('Section', () => {
   it('renders the title as an h2', () => {

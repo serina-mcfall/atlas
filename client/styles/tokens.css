@@ -10,6 +10,7 @@
   --topic: #f3e8d4;
   --topic-tint: rgba(243, 232, 212, 0.06);
   --topic-border: rgba(243, 232, 212, 0.25);
+  --topic-text: #0a1230;
 
   --font-body: 'Lexend Variable', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
@@ -41,42 +42,49 @@
   --topic: #5fd6c8;
   --topic-tint: rgba(95, 214, 200, 0.06);
   --topic-border: rgba(95, 214, 200, 0.25);
+  --topic-text: #0c5147;
 }
 
 [data-topic='databases'] {
   --topic: #ff9580;
   --topic-tint: rgba(255, 149, 128, 0.06);
   --topic-border: rgba(255, 149, 128, 0.25);
+  --topic-text: #7a2410;
 }
 
 [data-topic='javascript'] {
   --topic: #c8a8f0;
   --topic-tint: rgba(200, 168, 240, 0.06);
   --topic-border: rgba(200, 168, 240, 0.25);
+  --topic-text: #4a2570;
 }
 
 [data-topic='typescript'] {
   --topic: #7fd49f;
   --topic-tint: rgba(127, 212, 159, 0.06);
   --topic-border: rgba(127, 212, 159, 0.25);
+  --topic-text: #1f5530;
 }
 
 [data-topic='css'] {
   --topic: #ffc080;
   --topic-tint: rgba(255, 192, 128, 0.06);
   --topic-border: rgba(255, 192, 128, 0.25);
+  --topic-text: #6a3a08;
 }
 
 [data-topic='a11y'] {
   --topic: #f5a8c0;
   --topic-tint: rgba(245, 168, 192, 0.06);
   --topic-border: rgba(245, 168, 192, 0.25);
+  --topic-text: #7a2548;
 }
 
 [data-topic='terminal'] {
   --topic: #e8d098;
   --topic-tint: rgba(232, 208, 152, 0.06);
   --topic-border: rgba(232, 208, 152, 0.25);
+  --topic-text: #5a4408;
 }
 
 @media (prefers-reduced-motion: reduce) {
