@@ -7,10 +7,11 @@ export async function seed(knex: Knex): Promise<void> {
   await knex('tags').del()
   await knex('topics').del()
 
-  const [react, databases] = await knex('topics')
+  const [react, databases, terminal] = await knex('topics')
     .insert([
       { slug: 'react', name: 'React' },
       { slug: 'databases', name: 'Databases' },
+      { slug: 'terminal', name: 'Terminal' },
     ])
     .returning('id')
 
@@ -20,6 +21,7 @@ export async function seed(knex: Knex): Promise<void> {
       title: 'React Components',
       summary: 'Functions that return UI.',
       diagram_url: '/diagrams/react-components.svg',
+      kind: 'concept',
       source_name: null,
       source_url: null,
       topic_id: react.id ?? react,
@@ -29,6 +31,7 @@ export async function seed(knex: Knex): Promise<void> {
       title: 'How a database query travels',
       summary: 'From the client to the disk and back.',
       diagram_url: '/diagrams/query-travel.svg',
+      kind: 'concept',
       source_name: null,
       source_url: null,
       topic_id: databases.id ?? databases,
@@ -38,6 +41,7 @@ export async function seed(knex: Knex): Promise<void> {
       title: 'useState vs useReducer',
       summary: 'When to reach for which.',
       diagram_url: '/diagrams/usestate-usereducer.svg',
+      kind: 'concept',
       source_name: null,
       source_url: null,
       topic_id: react.id ?? react,
@@ -47,9 +51,20 @@ export async function seed(knex: Knex): Promise<void> {
       title: 'What aria-modal actually does',
       summary: 'And what it does not do for you.',
       diagram_url: '/diagrams/aria-modal.svg',
+      kind: 'concept',
       source_name: null,
       source_url: null,
       topic_id: react.id ?? react,
+    },
+    {
+      slug: 'terminal',
+      title: 'Terminal — the commands I use most',
+      summary: 'A quick lookup card for the bash/zsh commands worth not having to Google.',
+      diagram_url: '',
+      kind: 'reference',
+      source_name: null,
+      source_url: null,
+      topic_id: terminal.id ?? terminal,
     },
   ])
 }
