@@ -5,3 +5,71 @@
   <Cmd code="pwd" desc="print working directory" />
   <Cmd code="ls -la" desc="list directory contents, long format, include hidden" />
 </Section>
+
+<Section num="02" title="File operations">
+  <Cmd code="mkdir -p <path>" desc="make directory (use -p for nested)" />
+  <Cmd code="touch <file>" desc="create empty file (or update mtime)" />
+  <Cmd code="cp <src> <dst>" desc="copy file" />
+  <Cmd code="cp -r <src> <dst>" desc="copy directory recursively" />
+  <Cmd code="mv <src> <dst>" desc="move or rename" />
+  <Cmd code="rm <file>" desc="delete file" />
+  <Cmd code="rm -rf <dir>" desc="delete directory (irreversible — be sure)" />
+</Section>
+
+<Section num="03" title="Search">
+  <Cmd code='find <dir> -name "<pattern>"' desc="find files by name (quote the pattern)" />
+  <Cmd code="find . -type f" desc="find all files, not directories" />
+  <Cmd code="grep -r <pattern> <dir>" desc="recursive search through files" />
+  <Cmd code="grep -in <pattern> <file>" desc="case-insensitive + line numbers" />
+  <Cmd code="rg <pattern>" desc="ripgrep — faster modern grep" />
+  <Cmd code="which <command>" desc="show absolute path of command" />
+</Section>
+
+<Section num="04" title="Text processing">
+  <Cmd code="cat <file>" desc="print file contents" />
+  <Cmd code="less <file>" desc="paginated view (q to quit, /pattern to search)" />
+  <Cmd code="head -n 20 <file>" desc="first 20 lines" />
+  <Cmd code="tail -n 20 <file>" desc="last 20 lines" />
+  <Cmd code="tail -f <file>" desc="follow appended output (log watching)" />
+  <Cmd code="wc -l <file>" desc="count lines" />
+  <Cmd code="sort <file> | uniq" desc="sorted unique lines (the classic combo)" />
+</Section>
+
+<Section num="05" title="Pipes & redirects">
+  <Cmd code="<cmd1> | <cmd2>" desc="pipe stdout of cmd1 into stdin of cmd2" />
+  <Cmd code="<cmd> > <file>" desc="write stdout to file (overwrite)" />
+  <Cmd code="<cmd> >> <file>" desc="append stdout to file" />
+  <Cmd code="<cmd> 2> <file>" desc="redirect stderr to file" />
+  <Cmd code="<cmd> > log 2>&1" desc="capture stdout AND stderr together" />
+  <Cmd code="<cmd1> && <cmd2>" desc="run cmd2 only if cmd1 succeeded" />
+  <Cmd code="<cmd1> || <cmd2>" desc="run cmd2 only if cmd1 failed" />
+</Section>
+
+<Section num="06" title="Processes & jobs">
+  <Cmd code="ps aux | grep <name>" desc="find process by name" />
+  <Cmd code="kill <pid>" desc="terminate process (SIGTERM, polite)" />
+  <Cmd code="kill -9 <pid>" desc="force kill (SIGKILL, last resort)" />
+  <Cmd code="ctrl-c" desc="interrupt foreground process" />
+  <Cmd code="ctrl-z" desc="suspend foreground process to background" />
+  <Cmd code="jobs" desc="list backgrounded jobs in this shell" />
+  <Cmd code="fg" desc="bring most-recent job back to foreground" />
+</Section>
+
+<Section num="07" title="Networking">
+  <Cmd code="curl <url>" desc="fetch URL (GET, prints to stdout)" />
+  <Cmd code="curl -I <url>" desc="fetch headers only (HEAD)" />
+  <Cmd code="curl -X POST -d '<json>' <url>" desc="POST with body (add -H for content-type)" />
+  <Cmd code="curl -o <file> <url>" desc="download response to file" />
+  <Cmd code="ssh user@host" desc="connect via SSH" />
+  <Cmd code="scp <local> user@host:<remote>" desc="secure copy to remote" />
+  <Cmd code="lsof -i :<port>" desc="what process is using this port?" />
+</Section>
+
+<Section num="08" title="System">
+  <Cmd code="df -h" desc="disk usage by filesystem (human-readable)" />
+  <Cmd code="du -sh <dir>" desc="size of a directory (summary, human-readable)" />
+  <Cmd code="du -sh * | sort -h" desc="all entries by size in current dir" />
+  <Cmd code="free -h" desc="memory usage (human-readable)" />
+  <Cmd code="uptime" desc="load + how long the machine has been up" />
+  <Cmd code="env | grep <var>" desc="check environment variable values" />
+</Section>
