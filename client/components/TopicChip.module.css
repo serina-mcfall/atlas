@@ -4,7 +4,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--topic);
+  color: var(--topic-text);
   border-left: 3px solid var(--topic);
   padding-left: var(--space-2);
   line-height: 1;

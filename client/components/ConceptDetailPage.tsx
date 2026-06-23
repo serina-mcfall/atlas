@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query'
 
 import { fetchConcept } from '../apis/concepts.ts'
 import ConceptSheet from './ConceptSheet.tsx'
+import ReferenceSheet from './ReferenceSheet.tsx'
 import LoadingIndicator from './LoadingIndicator.tsx'
 import ErrorMessage from './ErrorMessage.tsx'
 
@@ -34,7 +35,11 @@ function ConceptDetailPage() {
     return <ErrorMessage error={concept.error} />
   }
 
-  return <ConceptSheet concept={concept.data} />
+  return concept.data.kind === 'reference' ? (
+    <ReferenceSheet concept={concept.data} />
+  ) : (
+    <ConceptSheet concept={concept.data} />
+  )
 }
 
 export default ConceptDetailPage

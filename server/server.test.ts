@@ -16,7 +16,7 @@ describe('GET /api/v1/concepts', () => {
   it('returns a list of concepts', async () => {
     const res = await request(server).get('/api/v1/concepts')
     expect(res.status).toBe(200)
-    expect(res.body).toHaveLength(4)
+    expect(res.body).toHaveLength(5)
     expect(res.body[0]).toHaveProperty('slug')
     expect(res.body[0]).toHaveProperty('topic')
   })
