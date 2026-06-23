@@ -7,7 +7,7 @@ export async function getAllConcepts(db = connection): Promise<Concept[]> {
     .select(
       'concepts.slug as slug',
       'concepts.title as title',
-      'topics.name as topic',
+      'topics.slug as topic',
       'concepts.summary as summary',
       'concepts.diagram_url as diagramUrl',
       'concepts.kind as kind',
@@ -28,7 +28,7 @@ export async function getConceptBySlug(
       'concepts.id as id',
       'concepts.slug as slug',
       'concepts.title as title',
-      'topics.name as topic',
+      'topics.slug as topic',
       'concepts.summary as summary',
       'concepts.diagram_url as diagramUrl',
       'concepts.kind as kind',
