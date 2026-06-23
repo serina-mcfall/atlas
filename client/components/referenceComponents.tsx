@@ -15,8 +15,8 @@ export function Section({ num, title, children }: SectionProps) {
           {title}
         </h2>
         <span className={styles.sectionNum}>{num}</span>
-        <div className={styles.cmdList}>{children}</div>
       </header>
+      <div className={styles.cmdList}>{children}</div>
     </section>
   )
 }

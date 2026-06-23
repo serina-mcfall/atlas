@@ -3,14 +3,15 @@ import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import { MemoryRouter } from 'react-router'
 import React from 'react'
-import ReferenceSheet from './ReferenceSheet.tsx'
+import ReferenceSheet from './ReferenceSheet'
 
 const concept = {
   slug: 'terminal',
   title: 'Terminal — the commands I use most',
   topic: 'terminal',
   kind: 'reference' as const,
-  summary: 'A quick lookup card for the bash/zsh commands worth not having to Google.',
+  summary:
+    'A quick lookup card for the bash/zsh commands worth not having to Google.',
   diagramUrl: '',
   source: null,
   relatedConcepts: [],
